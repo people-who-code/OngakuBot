@@ -1,0 +1,34 @@
+{
+  "name": "ongakubot",
+  "version": "1.0.0",
+  "description": "post songs daily in slack channel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/people-who-code/OngakuBot.git"
+  },
+  "keywords": [
+    "slack",
+    "slack",
+    "bot",
+    "ongakubot"
+  ],
+  "author": "People Who Code",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/people-who-code/OngakuBot/issues"
+  },
+  "homepage": "https://github.com/people-who-code/OngakuBot#readme",
+  "dependencies": {
+    "@slack/bolt": "^3.10.0",
+    "spotify-web-api-node": "^5.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
