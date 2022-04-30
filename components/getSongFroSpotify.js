@@ -1,13 +1,17 @@
 const SpotifyWebApi = require('spotify-web-api-node');
 require('dotenv').config();
 const fs = require('fs');
-const titlesJson = JSON.parse(fs.readFileSync('titles.json'));
+const titlesJson = JSON.parse(fs.readFile('titles.json', 'utf8', function(err, data) {
+    console.log(err);
+}));
+
+console.log(titlesJson);
 console.log(Math.round(Math.random() * (titlesJson.titles.length - 1) + 1));
 var spotifyApi = new SpotifyWebApi({
     clientId: process.env.SPOTIFY_CLIENT_ID,
     clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
     accessToken: process.env.SPOTIFY_ACCESS_TOKEN,
-    redirectUri: 'http://www.example.com/callback',
+    redirectUri: 'http://localhost',
 });
 
 module.exports.getSongFroSpotify = async () => {
